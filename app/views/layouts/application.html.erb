@@ -9,6 +9,13 @@
   </head>
 
   <body>
-    <%= yield %>
+    <div class="navbar-cocktails navbar-cocktails-fixed">
+      <%= link_to 'Cocktails', cocktails_path, class: 'navbar-cocktails-link' %>
+      <%= link_to 'Add a new Cocktail', new_cocktail_path, class: 'btn-vale' %>
+    </div>
+
+    <div class="container">
+      <%= yield %>
+    </div>
   </body>
 </html>
