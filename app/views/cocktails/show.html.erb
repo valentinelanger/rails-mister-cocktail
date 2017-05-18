@@ -1,30 +1,53 @@
-<p id="notice"><%= notice %></p>
-
-<h2><%= @cocktail.name %></h2>
-
-<% @cocktail.doses.each do |dose| %>
-  <p><%= dose.description %>: <%= dose.ingredient.name %></p>
-  <%= link_to "Destroy dose", dose_path(dose), method: :delete, data: { confirm: 'Are you sure?' } %>
-<% end %>
-
-<%= link_to 'Edit', edit_cocktail_path(@cocktail) %> |
-
-<p>---------------------------------------------</p>
-
-<h5>Add a dose</h5>
-
-<%= simple_form_for([@cocktail, @dose]) do |f| %>
-  <%= f.error_notification %>
-
-  <div class="form-inputs">
-    <%= f.input :description %>
+<div class="row padded great-card-show">
+  <div class="col-xs-12 col-sm-6">
+    <div class="card-show" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url('<%= image_path(@cocktail.image_url) %>');"></div>
   </div>
 
-  <div class="form-inputs">
-    <%= f.association :ingredient %>
+  <div class="col-xs-12 col-sm-6">
+    <div id="content-cocktail">
+      <p id="notice"><%= notice %></p>
+      <h2><%= @cocktail.name %></h2>
+      <h5 class="other-padded">Recipe:</h5>
+      <% @cocktail.doses.each do |dose| %>
+        <div class="row text-inline">
+          <div class="col-xs-6">
+            <ul>
+              <li><%= dose.description %> de <%= dose.ingredient.name %></li>
+            </ul>
+          </div>
+          <div class="col-xs-6">
+            <%= link_to "Destroy dose", dose_path(dose), method: :delete, data: { confirm: 'Are you sure?' }, class: 'btn-vale-default text-center' %>
+          </div>
+        </div>
+      <% end %>
+    </div>
   </div>
+</div>
 
-  <div class="form-actions">
-    <%= f.button :submit %>
+<div class="row padded">
+  <div class="col-xs-12 col-sm-offset-3 col-sm-6">
+    <div class="link" >
+    <%= link_to 'Edit cocktail', edit_cocktail_path(@cocktail), class: 'btn-vale text-center' %>
+    <%= link_to 'Delete cocktail', @cocktail, method: :delete, data: { confirm: 'Are you sure?' }, class: 'btn-vale text-center' %>
+    </div>
   </div>
-<% end %>
+</div>
+
+<div class="row padded marged-bottom">
+  <div class="col-xs-12 col-sm-offset-2 col-sm-8">
+    <h4>Add a dose</h4>
+    <%= simple_form_for([@cocktail, @dose]) do |f| %>
+      <%= f.error_notification %>
+      <div class="form-inputs">
+        <%= f.input :description %>
+      </div>
+      <div class="form-inputs">
+        <%= f.association :ingredient %>
+      </div>
+
+      <div class="form-actions">
+        <%= f.submit :submit, class: 'btn-vale', id: "btn-overriding-bootstrap" %>
+      </div>
+    <% end %>
+  </div>
+</div>

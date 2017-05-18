@@ -21,8 +21,9 @@
 }
 
 /* Navbar logo */
-.navbar-cocktails-brand img {
+.navbar-cocktails-brand {
   width: 50px;
+  margin-left: 25px;
 }
 
 /* Navbar right section (with form, links, button) */
@@ -42,7 +43,7 @@
 /* Navbar standard link */
 .navbar-cocktails-link {
   color: $gray;
-  font-size: 14px;
+  font-size: 16px;
   &:hover {
   color: $green;
   text-decoration: none;

@@ -8,7 +8,9 @@
 require "json"
 require "rest-client"
 
+Dose.destroy_all
 Ingredient.destroy_all
+Cocktail.destroy_all
 
 puts 'creating your db....'
 # TODO: Write a seed to insert 10 posts in the database fetched from the Hacker News API.
@@ -21,4 +23,16 @@ response['drinks'].each do |ingredient|
     name: ingredient["strIngredient1"]
   )
 end
+
+
+Cocktail.create!(
+  name: "Tequila Sunrise",
+  image_url: "http://food.fnr.sndimg.com/content/dam/images/food/fullset/2015/5/28/1/KC0604H_Tequila-Sunrise_s4x3.jpg.rend.hgtvcom.616.462.jpeg"
+)
+
+Cocktail.create!(
+  name: "Mojito",
+  image_url: "http://punchdrink.com/wp-content/uploads/2013/12/Mojito.jpg"
+)
+
 puts 'finished'

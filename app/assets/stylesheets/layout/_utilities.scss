@@ -6,8 +6,19 @@
 
 // Paddings
 .padded {
-  padding-top: 5em;
-  padding-bottom: 5em;
+  padding: 20px 10px;
+}
+
+.padded-form {
+  padding: 10px 0px;
+}
+
+.other-padded {
+  padding: 20px 0px 0px 0px;
+}
+
+.marged-bottom {
+  margin: 30px
 }
 
 // Backgrounds
@@ -37,4 +48,12 @@ h1, h2, h3, h4, h5 {
 
 body {
   background-color: #fafafa;
+}
+
+
+.form-actions {
+  text-align: right;
+  .btn-vale {
+    width: 150px;
+  }
 }

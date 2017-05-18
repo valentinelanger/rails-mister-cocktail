@@ -11,11 +11,23 @@
   <body>
     <div class="navbar-cocktails navbar-cocktails-fixed">
       <%= link_to 'Cocktails', cocktails_path, class: 'navbar-cocktails-link' %>
-      <%= link_to 'Add a new Cocktail', new_cocktail_path, class: 'btn-vale' %>
+      <div>
+        <%= icon('glass') %>
+        <%= link_to 'Add a new Cocktail', new_cocktail_path, class: 'navbar-cocktails-link' %>
+        <%= image_tag "foto_CV.jpg", { class: "navbar-cocktails-brand avatar" }%>
+      </div>
     </div>
 
     <div class="container">
       <%= yield %>
+    </div>
+
+    <div class="footer">
+      <ul>
+        <li>About</li>
+        <li>Team</li>
+        <li>Contact us</li>
+      </ul>
     </div>
   </body>
 </html>
