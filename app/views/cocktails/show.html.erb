@@ -1,6 +1,6 @@
 <div class="row padded great-card-show">
   <div class="col-xs-12 col-sm-6">
-    <div class="card-show" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url('<%= image_path(@cocktail.image_url) %>');"></div>
+    <div class="card-show" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url('<%= cl_image_path @cocktail.image.path, crop: :fill %>');"></div>
   </div>
 
   <div class="col-xs-12 col-sm-6">

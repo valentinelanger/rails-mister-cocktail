@@ -1,0 +1,25 @@
+
+<div class="navbar-cocktails navbar-cocktails-fixed">
+    <%= link_to icon('glass'), cocktails_path, class: 'navbar-cocktails-link navbar-cocktails-brand' %>
+
+
+
+
+    <div class="navbar-cocktails-search">
+      <div id="search-form">
+
+      <form action="/cocktails" method="get" class="search-form">
+        <input type="text" name="query" placeholder="hello" class="navbar-cocktails-search-input">
+      </form>
+
+      <button class="navbar-cocktails-search-btn"><%= icon('search') %></button>
+
+    </div>
+  </div>
+
+
+  <div>
+    <%= link_to 'Add a new Cocktail', new_cocktail_path, class: 'navbar-cocktails-link' %>
+    <%= image_tag "foto_CV.jpg", { class: "navbar-cocktails-brand avatar" }%>
+  </div>
+</div>

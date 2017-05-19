@@ -41,6 +41,13 @@ gem "autoprefixer-rails"
 gem "rest-client"
 # Security
 gem 'figaro'
+# upload images
+gem 'cloudinary', '1.1.7'
+# stock image directly
+gem 'attachinary', github: 'assembler/attachinary'
+# gere upload de fichiers
+gem 'jquery-fileupload-rails'
+
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console

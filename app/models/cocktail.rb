@@ -1,4 +1,5 @@
 class Cocktail < ApplicationRecord
+  has_attachment :image
   has_many :doses, dependent: :destroy
   has_many :ingredients, through: :doses
 

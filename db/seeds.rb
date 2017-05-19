@@ -24,15 +24,16 @@ response['drinks'].each do |ingredient|
   )
 end
 
+# has_attachement :photo
+url = "http://food.fnr.sndimg.com/content/dam/images/food/fullset/2015/5/28/1/KC0604H_Tequila-Sunrise_s4x3.jpg.rend.hgtvcom.616.462.jpeg"
+cocktail = Cocktail.new(name: 'Tequila Sunrise')
+cocktail.save!
+cocktail.image_url = url # Upload happens here
 
-Cocktail.create!(
-  name: "Tequila Sunrise",
-  image_url: "http://food.fnr.sndimg.com/content/dam/images/food/fullset/2015/5/28/1/KC0604H_Tequila-Sunrise_s4x3.jpg.rend.hgtvcom.616.462.jpeg"
-)
+url = "http://punchdrink.com/wp-content/uploads/2013/12/Mojito.jpg"
+cocktail = Cocktail.new(name: 'Mojito')
+cocktail.save!
+cocktail.image_url = url # Upload happens here
 
-Cocktail.create!(
-  name: "Mojito",
-  image_url: "http://punchdrink.com/wp-content/uploads/2013/12/Mojito.jpg"
-)
 
 puts 'finished'

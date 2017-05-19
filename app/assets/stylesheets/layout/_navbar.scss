@@ -24,6 +24,7 @@
 .navbar-cocktails-brand {
   width: 50px;
   margin-left: 25px;
+  font-size: 25px !important;
 }
 
 /* Navbar right section (with form, links, button) */
@@ -68,6 +69,14 @@
 }
 
 /* Navbar search form */
+#search-form {
+  width: 20px
+}
+
+#search-form:hover {
+  width: 300px;
+}
+
 .navbar-cocktails-search {
   flex: 0 1 300px;
   display: flex;
@@ -85,21 +94,22 @@
   top: -2px;
   z-index: 1;
 }
+
 .navbar-cocktails-search-input {
   flex: 0 1 300px;
   transition: all 0.15s ease;
   line-height: 40px;
   font-weight: lighter;
   color: #666666;
-  border: 1px solid #E6E6E6;
-  border-radius: 5px;
+  border: none;
   padding: 0 10px;
   font-size: 14px;
   outline: none;
 }
 .navbar-cocktails-search-input:focus  {
-  border: 1px solid #CCCCCC;
+  width: 300px;
 }
+
 
 /* Navbar dropdown menu */
 .navbar-cocktails-dropdown-menu {

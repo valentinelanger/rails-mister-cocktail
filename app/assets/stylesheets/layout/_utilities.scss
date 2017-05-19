@@ -17,10 +17,6 @@
   padding: 20px 0px 0px 0px;
 }
 
-.marged-bottom {
-  margin: 30px
-}
-
 // Backgrounds
 .bg-white-fa {
   background: #fafafa;
@@ -37,8 +33,9 @@
 
 // general - for navbar
 .container {
-  min-height: 100vh;
+  min-height: 100vw;
   padding-top: 70px;
+  margin-top: 50px;
 }
 
 // font

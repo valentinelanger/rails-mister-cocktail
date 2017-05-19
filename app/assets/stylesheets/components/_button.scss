@@ -1,52 +1,63 @@
 .btn-vale {
   color: $gray;
-  border-bottom: 3px solid rgba(6, 214, 160, 0.7);
-  box-shadow: inset 0 -7px 0 $green;
+  border-bottom: 3px solid $light-green;
+  box-shadow: inset 0 -7px 0 $super-light-green;
   background-color: transparent;
   padding: 5px 5px;
-  font-weight: lighter;
   width: 150px;
   &:hover {
-    color: rgba(0,0,0,0.8);
-    background-color: $light-green;
+    color: black;
+    background-color: $super-light-green;
     text-decoration: none;
   }
 }
 
 #btn-overriding-bootstrap {
   border: none !important;
-  border-bottom: 3px solid rgba(6, 214, 160, 0.7) !important;
+  border-bottom: 3px solid $light-green !important;
+}
+
+#btn-overriding-bootstrap-default {
+  border: none !important;
+  border-bottom: 3px solid $light-gray !important;
 }
 
 .btn-vale-default {
   color: $gray;
-  border-bottom: 3px solid $dark-gray;
-  box-shadow: inset 0 -7px 0 $light-gray;
+  border-bottom: 3px solid $light-gray;
+  box-shadow: inset 0 -7px 0 $super-light-gray;
   background-color: transparent;
   padding: 5px 5px;
   font-weight: lighter;
   width: 150px;
   &:hover {
     color: rgba(0,0,0,0.8);
-    background-color: $light-gray;
+    background-color: $super-light-gray;
     text-decoration: none;
   }
 }
 
 
-
-.btn-vale-success {
-  border-radius: 30px;
-  color: $green;
-  background-color: transparent;
-  border: 1px solid $green;
-  padding: 10px 15px;
-  margin: 10px;
-  font-weight: lighter;
-  opacity: 0.6;
-  &:hover {
-    opacity: 1;
-    text-decoration: none;
-    color: $green;
-  }
+.custom-file-input::-webkit-file-upload-button {
+  visibility: hidden;
+}
+.custom-file-input::before {
+  display: inline-block;
+  background: -webkit-linear-gradient(top, #f9f9f9, #e3e3e3);
+  border: 1px solid #999;
+  border-radius: 3px;
+  padding: 5px 8px;
+  outline: none;
+  white-space: nowrap;
+  -webkit-user-select: none;
+  cursor: pointer;
+  text-shadow: 1px 1px #fff;
+  font-weight: 700;
+  font-size: 10pt;
+}
+.custom-file-input:hover::before {
+  border-color: black;
+}
+.custom-file-input:active::before {
+  background: -webkit-linear-gradient(top, #e3e3e3, #f9f9f9);
 }

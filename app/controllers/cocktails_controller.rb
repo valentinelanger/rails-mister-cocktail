@@ -2,7 +2,14 @@ class CocktailsController < ApplicationController
   before_action :set_cocktail, only: [:show, :edit, :update, :destroy]
 
   def index
-    @cocktails = Cocktail.all
+    if params[:query].present?
+      @cocktails = Cocktail.where(
+        'name ilike ?',
+        "%#{params[:query]}%"
+      )
+    else
+      @cocktails = Cocktail.all
+    end
   end
 
   def show
@@ -48,6 +55,6 @@ class CocktailsController < ApplicationController
 
 
   def cocktail_params
-    params.require(:cocktail).permit(:name, :image_url)
+    params.require(:cocktail).permit(:name, :image)
   end
 end

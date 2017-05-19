@@ -6,17 +6,13 @@
 
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <%= cloudinary_js_config %>
   </head>
 
   <body>
-    <div class="navbar-cocktails navbar-cocktails-fixed">
-      <%= link_to 'Cocktails', cocktails_path, class: 'navbar-cocktails-link' %>
-      <div>
-        <%= icon('glass') %>
-        <%= link_to 'Add a new Cocktail', new_cocktail_path, class: 'navbar-cocktails-link' %>
-        <%= image_tag "foto_CV.jpg", { class: "navbar-cocktails-brand avatar" }%>
-      </div>
-    </div>
+    <navbar>
+      <%= render 'shared/navbar' %>
+    </navbar>
 
     <div class="container">
       <%= yield %>

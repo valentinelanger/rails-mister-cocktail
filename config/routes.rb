@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
-  resources :ingredients
+  mount Attachinary::Engine => "/attachinary"
+
   resources :cocktails do
     resources :doses, only: [ :new, :create ]
   end
