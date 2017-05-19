@@ -1,16 +1,15 @@
 <p id="notice"><%= notice %></p>
 
 <div class="row">
-<h1 class="padded">Cocktails</h1>
+  <h1 class="padded">Cocktails</h1>
 
-
-<% @cocktails.each do |cocktail| %>
-  <div class="col-xs-12 col-sm-4">
-    <div class="card" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url('<%= image_path(cocktail.image_url) %>');">
-      <p class="card-description"><%= cocktail.name %></p>
-      <%= link_to '', cocktail, class: "card-link" %>
+  <% @cocktails.each do |cocktail| %>
+    <div class="col-xs-12 col-sm-4">
+      <div class="card" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.2)), url('<%= image_path(cocktail.image_url) %>');">
+        <p class="card-description"><%= cocktail.name %></p>
+        <%= link_to '', cocktail, class: "card-link" %>
+      </div>
     </div>
-  </div>
-<% end %>
+  <% end %>
 </div>
 
